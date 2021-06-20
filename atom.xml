@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://85.al</id>
+    <title>枯叶博客</title>
+    <updated>2021-06-20T23:05:29.712Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://85.al"/>
+    <link rel="self" href="https://85.al/atom.xml"/>
+    <subtitle>Be brave no matter what your life is like to you</subtitle>
+    <logo>https://85.al/images/avatar.png</logo>
+    <icon>https://85.al/favicon.ico</icon>
+    <rights>All rights reserved 2021, 枯叶博客</rights>
+    <entry>
+        <title type="html"><![CDATA[一键部署 v2ray 到 heroku Deploy]]></title>
+        <id>https://85.al/NRREb3dyB/</id>
+        <link href="https://85.al/NRREb3dyB/">
+        </link>
+        <updated>2021-06-20T22:11:31.000Z</updated>
+        <content type="html"><![CDATA[<p>1.部署时选择 v2ray core 的版本和Vmess协议的UUID（&quot;alterId&quot;默认为64）。</p>
+<p>2.服务端部署后，应 open app ，显示 Bad Request，表示部署成功。</p>
+<p>3.客户端可使用websocket+tls传输协议或者 websocket+vmess（auto加密）。</p>
+<p>参考<br>
+https://github.com/v2ray/v2ray-core<br>
+https://github.com/RealSlakey/v2ray-heroku<br>
+https://github.com/onplus/v2hero/</p>
+]]></content>
+    </entry>
+</feed>

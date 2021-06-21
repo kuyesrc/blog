@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | 枯叶博客</title>
+<title>Ubuntu开启BBR加速 | 枯叶博客</title>
 <meta name="description" content="Be brave no matter what your life is like to you.">
 <meta name="keywords" content="枯叶博客,信息安全,ddos,枯叶,阿叶">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -79,13 +79,45 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">关于</h2>
+          <h2 class="post-title">Ubuntu开启BBR加速</h2>
           <div class="post-info post-detail-info">
             <span><i class="icon-calendar-outline"></i> Monday, June 21st 2021</span>
             
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://85.al/2NHpx6aKp/">
+                    ubuntu
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://85.al/lbQzEZJvrt/">
+                    BBR加速
+                    
+                  </a>
+                
+              </span>
+            
           </div>
           <div class="post-content">
-            <p>人生有点长，枯叶正在搞事情。</p>
+            <p>BBR是google的TCP阻塞控制算法，可以最大程度的利用带宽，提升网络传输速率。</p>
+<!-- more -->
+<p>Linux kernel 4.9 及以上已支持 tcp_bbr</p>
+<p>1.查看系统内核版本：</p>
+<p>uname -r</p>
+<p>看内核版本是否大于等于4.9，否则要升级内核，或者安装bbr。</p>
+<p>2.开启BBR：</p>
+<p>echo &quot;net.core.default_qdisc=fq&quot; &gt;&gt; /etc/sysctl.conf</p>
+<p>echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; &gt;&gt; /etc/sysctl.conf</p>
+<p>3.保存生效：</p>
+<p>sysctl -p</p>
+<p>4.检查BBR是否启用：<br>
+输入如下命令：</p>
+<p>sysctl -n net.ipv4.tcp_congestion_control</p>
+<p>得到如下结果：</p>
+<p>bbr</p>
 
           </div>
         </div>

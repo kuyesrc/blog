@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://85.al</id>
-    <title>枯叶博客</title>
-    <updated>2021-06-30T13:37:58.428Z</updated>
+    <title>小七博客</title>
+    <updated>2021-06-30T15:43:37.253Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://85.al"/>
     <link rel="self" href="https://85.al/atom.xml"/>
-    <subtitle>Be brave no matter what your life is like to you</subtitle>
+    <subtitle>孤独没什么不好 至少不必丢了骄傲。</subtitle>
     <logo>https://85.al/images/avatar.png</logo>
     <icon>https://85.al/favicon.ico</icon>
-    <rights>All rights reserved 2021, 枯叶博客</rights>
+    <rights>All rights reserved 2021, 小七博客</rights>
     <entry>
         <title type="html"><![CDATA[使用DNS隐藏传输payload]]></title>
         <id>https://85.al/7FI63R4WB/</id>
@@ -19,12 +19,6 @@
         <summary type="html"><![CDATA[<p>如何使用DNS隐藏和传输payload？</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>如何使用DNS隐藏和传输payload？</p>
-<!-- more -->
-<p>个人推荐以下工具，非常适合红队使用。</p>
-<p><strong>DNSStager：</strong></p>
-<p><code>https://github.com/mhaskar/DNSStager</code></p>
-<p><strong>Shells.Systems：</strong></p>
-<p><code>https://shells.systems</code></p>
 ]]></content>
     </entry>
     <entry>
@@ -36,9 +30,6 @@
         <summary type="html"><![CDATA[<p>GITHUB上有安全研究人员公布了Windows Print Spooler远程代码执行漏洞（CVE-2021-1675）POC，Windows Print Spooler是打印后台处理服务，即管理所有本地和网络打印队列及控制所有打印工作，Windows Print Spooler 存在权限提升漏洞，经过身份认证的攻击者可利用此漏洞使 Spooler 服务加载恶意 DLL，从而获取权限提升。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>GITHUB上有安全研究人员公布了Windows Print Spooler远程代码执行漏洞（CVE-2021-1675）POC，Windows Print Spooler是打印后台处理服务，即管理所有本地和网络打印队列及控制所有打印工作，Windows Print Spooler 存在权限提升漏洞，经过身份认证的攻击者可利用此漏洞使 Spooler 服务加载恶意 DLL，从而获取权限提升。</p>
-<!-- more -->
-<p>POC已扩散 ， EXP已公开 ，官方已有可更新版本，鉴于漏洞危害较大，建议用户及时安装更新补丁。</p>
-<p>https://github.com/cube0x0/CVE-2021-1675</p>
 ]]></content>
     </entry>
     <entry>
@@ -50,13 +41,6 @@
         <summary type="html"><![CDATA[<p>1.部署时选择 v2ray core 的版本和Vmess协议的UUID（&quot;alterId&quot;默认为64）。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>1.部署时选择 v2ray core 的版本和Vmess协议的UUID（&quot;alterId&quot;默认为64）。</p>
-<!-- more -->
-<p>2.服务端部署后，应 open app ，显示 Bad Request，表示部署成功。</p>
-<p>3.客户端可使用websocket+tls传输协议或者 websocket+vmess（auto加密）。</p>
-<p>参考<br>
-https://github.com/v2ray/v2ray-core<br>
-https://github.com/RealSlakey/v2ray-heroku<br>
-https://github.com/onplus/v2hero/</p>
 ]]></content>
     </entry>
     <entry>
@@ -68,21 +52,6 @@ https://github.com/onplus/v2hero/</p>
         <summary type="html"><![CDATA[<p>BBR是google的TCP阻塞控制算法，可以最大程度的利用带宽，提升网络传输速率。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>BBR是google的TCP阻塞控制算法，可以最大程度的利用带宽，提升网络传输速率。</p>
-<!-- more -->
-<p>Linux kernel 4.9 及以上已支持 tcp_bbr</p>
-<p>1.查看系统内核版本：</p>
-<p>uname -r</p>
-<p>看内核版本是否大于等于4.9，否则要升级内核，或者安装bbr。</p>
-<p>2.开启BBR：</p>
-<p>echo &quot;net.core.default_qdisc=fq&quot; &gt;&gt; /etc/sysctl.conf</p>
-<p>echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; &gt;&gt; /etc/sysctl.conf</p>
-<p>3.保存生效：</p>
-<p>sysctl -p</p>
-<p>4.检查BBR是否启用：<br>
-输入如下命令：</p>
-<p>sysctl -n net.ipv4.tcp_congestion_control</p>
-<p>得到如下结果：</p>
-<p>bbr</p>
 ]]></content>
     </entry>
 </feed>

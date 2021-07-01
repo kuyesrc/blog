@@ -1,104 +1,100 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" >
-
 <title>一键部署 v2ray 到 heroku Deploy | 小七博客</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0;user-scalable=no">
+<link rel="shortcut icon" href="https://85.al/favicon.ico?v=1625115815806">
 <meta name="description" content="孤独没什么不好 至少不必丢了骄傲。">
 <meta name="keywords" content="小七博客,信息安全,ddos,小七">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 <script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://85.al/favicon.ico?v=1625115226835">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://85.al/styles/main.css">
 
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://85.al">
-        <img class="avatar" src="https://85.al/images/avatar.png?v=1625115226835" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://85.al">
-        <h1 class="site-title">小七博客</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://85.al">小七博客</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/guan-yu" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
     </div>
   </div>
-</div>
+</nav>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/guan-yu" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
-        <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://acg.toubiec.cn/random.php?2')">
-            </div>
-          
-          <h2 class="post-title">一键部署 v2ray 到 heroku Deploy</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> Wednesday, June 30, 2021 8:57 PM</span>
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>一键部署 v2ray 到 heroku Deploy</h1>
+            <p class="article-meta">
+              Wednesday, June 30, 2021 8:57 PM
+              
+                <a href="https://85.al/KHvDhUpLr/" class="badge ">
+                  v2ray
+                </a>
+              
+            </p>
             
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://85.al/KHvDhUpLr/">
-                    v2ray
-                    
-                  </a>
-                
-              </span>
+              <img src="https://acg.toubiec.cn/random.php?2" alt="一键部署 v2ray 到 heroku Deploy">
             
-          </div>
-          <div class="post-content">
-            <p>1.部署时选择 v2ray core 的版本和Vmess协议的UUID（&quot;alterId&quot;默认为64）。</p>
+            <div class="post-content">
+              <p>1.部署时选择 v2ray core 的版本和Vmess协议的UUID（&quot;alterId&quot;默认为64）。</p>
 <!-- more -->
 <p>2.服务端部署后，应 open app ，显示 Bad Request，表示部署成功。</p>
 <p>3.客户端可使用websocket+tls传输协议或者 websocket+vmess（auto加密）。</p>
@@ -107,52 +103,117 @@ https://github.com/v2ray/v2ray-core<br>
 https://github.com/RealSlakey/v2ray-heroku<br>
 https://github.com/onplus/v2hero/</p>
 
-          </div>
+            </div>
+          </article>
         </div>
-
-        
-          <div class="next-post">
-            <a class="purple-link" href="https://85.al/y7aJ8ntdK/">
-              <h3 class="post-title">
-                下一篇：Ubuntu开启BBR加速
-              </h3>
-            </a>
-          </div>
+        <div class="paper" data-aos="fade-in">
           
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://85.al/y7aJ8ntdK/">
+                <h3 class="post-title">
+                  Ubuntu开启BBR加速
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
       </div>
 
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://85.al/images/avatar.png?v=1625115815806" class="no-responsive avatar">
+    <div class="text-muted">孤独没什么不好 至少不必丢了骄傲。</div>
+    <div class="social-container">
       
-
-      <div class="site-footer">
-  <div class="slogan">孤独没什么不好 至少不必丢了骄傲。</div>
-  <div class="social-container">
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+    </div>
   </div>
-  <script type="text/javascript" src="https://js.users.51.la/21154739.js"></script> | <a class="rss" href="https://85.al/atom.xml" target="_blank">RSS</a>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://85.al/7FI63R4WB/">使用DNS隐藏传输payload</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://85.al/NRREb3dyB/">一键部署 v2ray 到 heroku Deploy</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://85.al/y7aJ8ntdK/">Ubuntu开启BBR加速</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://85.al/guan-yu/">关于</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://85.al/petfyt8pT/" class="badge secondary">
+          DNS隧道技术
+        </a>
+      
+        <a href="https://85.al/KHvDhUpLr/" class="badge ">
+          v2ray
+        </a>
+      
+        <a href="https://85.al/2NHpx6aKp/" class="badge warning">
+          ubuntu
+        </a>
+      
+        <a href="https://85.al/lbQzEZJvrt/" class="badge secondary">
+          BBR加速
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    <script type="text/javascript" src="https://js.users.51.la/21154739.js"></script> | <a class="rss" href="https://85.al/atom.xml" target="_blank">RSS</a>
+  </div>
 </div>
 
 
     </div>
-    <script type="application/javascript">
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
 
 hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
 
 </script>
 
